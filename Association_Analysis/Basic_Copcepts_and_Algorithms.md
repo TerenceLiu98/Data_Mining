@@ -108,3 +108,24 @@ Suppose $\{c, d, e\}$ is a frequent itemset. Clearly, any transaction that conta
 This strategy of trimming the exponential search space based on the support measure is known as **support-based pruning**. Such a pruning strategy is made possible by a key property of the support measure, namely, that the support for an itemset never exceeds the support for its subsets. This property is also known as the **anti-monotone** property of the support measure.
 
 Apriori uses **breadth-first search** and a Hash tree structure to count candidate item sets efficiently. It generates candidate item sets of length $k$ from item sets of length $k - 1$. Then it prunes the candidates which have an infrequent sub pattern. According to the downward closure lemma, the candidate set contains all frequent $k$-length item sets. After that, it scans the transaction database to determine frequent item sets among the candidates.
+
+### Frequent Itemset Generation in the Apriori Algorithm 
+
+*Apriori* is the first association rule mining algorithm that pioneered the use of support-based pruning to systematically control the exponential growth of candidate itemsets. 
+
+![Screenshot 2019-04-11 at 00.29.42.png](https://i.loli.net/2019/04/11/5cae19fdd2a2f.png)
+
+Initially, every item is considered as a candidate $1$-itmeset. After counting their supports, the candidate itemsets {coke} and {Eggs} 
+
+### Apriori Algorithm 
+
+* Method: 
+  * Let $k = 1$ 
+  * Generate frequent itemsets of length $1$ 
+  * Repeat until no new freqent itemsets are identified 
+    * Generate length $(k + 1)$ candidate itemsets from length $k$ frequent itemsets 
+    * Prune candidate itemsets containing subsets of length $k$ that are infrequent 
+    * Count the support of each candidate by scanning the DB 
+    * Eliminate candidates that are frequent, leaving only those that are frequent 
+    * 
+
