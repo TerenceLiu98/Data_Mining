@@ -1,8 +1,9 @@
 ---
 title: "Association Analysis: Basic Concepts and Algorithms"
-output: html_notebook
+author: "Terence Lau"
+date: "4/13/2019"
+output: pdf_document
 ---
-
 ## Motivation
 
 Many business enterprises accumulate large quantities of data from their day-to-day operations. For example, huge amounts of customer purchase data are collected daily at the checkout counters of grocery stores. This such data, commonly known as market basket transactions and here is a example:
